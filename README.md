@@ -44,10 +44,32 @@ All data was merged on the District Code. This resulted in an initial dataset wi
 
 After merging all data, the dataset was cleaned and all columns were prepared for machine learning.
 
+Since this data will be used for two different outcome variables, I create two separate Jupyter notebooks for working with the data,
+one for ELA and one for Math. In each one, I created a new column for the "ELA Score" or "Math Score" which placed a 0 in the column if
+the district's score was below the average and a 1 in the column if it was above average.
+
 ## Data Visualizations
+I started with looking at the class distribution for both ELA scores and Math Scores by creating bar charts for both.
+
+<IMG SRC = "https://github.com/courtneydrysdale/msds692_practicum/blob/main/Visualizations/ELA%20Scores.png" width="500"> <IMG SRC = "https://github.com/courtneydrysdale/msds692_practicum/blob/main/Visualizations/Math%20Scores.png" width="500">
+
+I also created boxplots for some of the features for students, teachers, and financial information since they shared similar ranges.
+While this did reveal some outliers, I chose not to remove them from the dataset since the number of rows is so small already.
+
+<IMG SRC = "https://github.com/courtneydrysdale/msds692_practicum/blob/main/Visualizations/Student%20Info%20Boxplot.png" width="500"><IMG SRC = "https://github.com/courtneydrysdale/msds692_practicum/blob/main/Visualizations/Teacher%20Info%20Boxplot.png" width="500">
+<IMG SRC = "https://github.com/courtneydrysdale/msds692_practicum/blob/main/Visualizations/Financial%20Info%20Boxplot.png" width="500">
+
+## Classification Models
+I fit the data to 6 different classification models. First to three that did not need data scaled: decision tree, random forest, and Naive Bayes.
+After this, I scaled the data using the StandardScaler and then fit models for logistic regression, artificial neural network, and K-nearest neighbors.
+
+The model that performed the best for ELA scores was logistic regression.
+
+The models that performed the best for Math scores were logistic regression and random forest.
+
+## Conclusion
 
 
-   
 ## Resources and References
 ### Datasets Combined
    - [2025 CMAS Math and ELA State Summary Results (XLS)](https://www.cde.state.co.us/assessment/2025_cmas_ela_math_statesummaryachievementresults)
