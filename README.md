@@ -63,12 +63,27 @@ While this did reveal some outliers, I chose not to remove them from the dataset
 I fit the data to 6 different classification models. First to three that did not need data scaled: decision tree, random forest, and Naive Bayes.
 After this, I scaled the data using the StandardScaler and then fit models for logistic regression, artificial neural network, and K-nearest neighbors.
 
-The model that performed the best for ELA scores was logistic regression.
+The model that performed the best for ELA scores was logistic regression with a 0.7879 accuracy score and 0.75 AUC-ROC score.
 
-The models that performed the best for Math scores were logistic regression and random forest.
+The models that performed the best for Math scores were logistic regression with a 0.7273 accuracy score and a 0.7195 AUC-ROC score 
+and random forest with a 0.7273 accuracy score and a 0.7478 AUC-ROC score. I calculated the coefficient magnitudes for the logistic regression models 
+and the feature importance for the random forest model.
 
 ## Conclusion
 
+When looking at the features that had the highest coefficient magnitude and feature importance, the same four features were the most important for all
+three of the most successful models.
+
+- Percent Minority
+- Average Teacher Salary
+- Staff Turnover Rate
+- Federal Funding per Pupil
+
+Districts could look at how to support these different areas through interventions, funding, or other supports. While some of the features are not in the
+control of districts (like the percentage of the student population who are racial minorities), it can still bring an awareness to understanding how the
+demographics of students could impact achievement scores.
+
+This project could be repeated for other districts, states, or individual schools to determine the areas that they could focus on in their own schools.
 
 ## Resources and References
 ### Datasets Combined
